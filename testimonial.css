@@ -1,0 +1,78 @@
+/* Reset básico de estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal en Grid */
+.testimonials-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna por defecto en móvil */
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Tarjeta de testimonio */
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cabecera de la tarjeta */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagen de perfil circular */
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Información del usuario */
+.user-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.user-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Texto del testimonio */
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+/* Diseño responsivo para pantallas grandes (Escritorio) */
+@media (min-width: 768px) {
+  .testimonials-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  }
+}
